@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investors - Form</title>
+
+    <!-- icofont-css-link -->
+    <link rel="stylesheet" href="css/icofont.min.css" />
+    <!-- Owl-Carosal-Style-link -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <!-- Bootstrap-Style-link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Aos-Style-link -->
+    <link rel="stylesheet" href="css/aos.css" />
+    <!-- Coustome-Style-link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive-Style-link -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <style>
+      .background-form-container {
+        background: linear-gradient(to bottom, #000000, #333333);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .form-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-width: 70%;
+      }
+
+      .form-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 1;
+      }
+
+      .form-slide.active {
+        opacity: 1;
+        z-index: 2;
+        animation: slideLeft 0.5s forwards;
+      }
+
+      @keyframes slideLeft {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+
+      .form-slide.previous {
+        animation: slideRight 0.5s forwards;
+      }
+
+      @keyframes slideRight {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+
+      .form-container h2 {
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      .form-container input[type="text"],
+      .form-container input[type="email"],
+      .form-container textarea,
+      .form-container select {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        z-index: 2;
+      }
+
+      .form-container select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .form-container label {
+        display: block;
+        margin-bottom: 10px;
+        width: fit-content;
+        color: #fff;
+      }
+
+      .form-container button {
+        padding: 10px 40px;
+        background-color: #2786a5;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-container button:hover {
+        background-color: #00b7ff;
+      }
+
+      .progress-container {
+        width: 80%;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        margin-top: -130px;
+      }
+
+      .progress-bar {
+        width: 0;
+        height: 20px;
+        background-color: #2786a5;
+        border-radius: 5px;
+        transition: width 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body style="text-align: left">
+    <div class="background-form-container">
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+
+      <div class="form-container">
+        <form
+          id="myForm"
+          action="https://formspree.io/f/mvoeleov"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="_next"
+            value="https://example.com/thank-you.html"
+          />
+          <div class="form-slide active">
+            <h2>1. Hi! What is Your Name ?*</h2>
+            <input
+              type="text"
+              name="Name"
+              placeholder="Type your answer here..."
+              required
+            />
+            <label><button class="next-btn">OK</button></label>
+          </div>
+
+          <div class="form-slide">
+            <h2>2. What’s your email address ? *</h2>
+            <input
+              type="email"
+              name="Email"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+            <label><button class="next-btn">OK</button></label>
+          </div>
+
+          <div class="form-slide">
+            <h2>3. Contact Number *</h2>
+            <input
+              type="text"
+              name="ContactNumber"
+              id="mobile"
+              placeholder="+1"
+              required
+            />
+            <label><button class="next-btn">OK</button></label>
+          </div>
+
+          <div class="form-slide">
+            <h2>4. What's the reason behind your idea to invest on Pepul?</h2>
+            <select name="InvestReason" required>
+              <option value="" selected disabled>Select an option</option>
+              <option value="To make huge ROI">To make huge ROI</option>
+              <option value="Just interested on Pepul's idea & vision">
+                Just interested on Pepul's idea & vision
+              </option>
+              <option value="To boost Made in India internet businesses">
+                To boost Made in India internet businesses
+              </option>
+              <option value="Other">Other</option>
+            </select>
+            <label><button class="next-btn">OK</button></label>
+          </div>
+
+          <div class="form-slide">
+            <h2>
+              5. Are you aware that this is a very "high-risk investment"?
+            </h2>
+            <label>
+              <input type="radio" name="HighRisk" value="Yes" required /> Yes
+            </label>
+            <label>
+              <input type="radio" name="HighRisk" value="No" required /> No
+            </label>
+            <label><button class="next-btn">OK</button></label>
+          </div>
+
+          <div class="form-slide">
+            <h2>
+              6. What is the investment amount you are planning to invest?
+              Kindly Mention along with Currency.
+            </h2>
+            <input
+              type="text"
+              name="InvestmentAmount"
+              placeholder="Type your answer here..."
+              required
+            />
+            <label><button class="next-btn">OK</button></label>
+          </div>
+
+          <div class="form-slide">
+            <h2>7. Anything else you would like to tell us.</h2>
+            <textarea
+              name="AdditionalInfo"
+              placeholder="Type your answer here..."
+              required
+            ></textarea>
+            <label><button class="submit-btn">Submit</button></label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/form.js"></script>
+  </body>
+</html>
