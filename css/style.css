@@ -4032,3 +4032,103 @@ footer .logo a img {
     width: 49%;
   }
 }
+/* faq-page-css */
+.faqs {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.faqs .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row-faqs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.faqs .container .faq_title {
+  color: var(--primery);
+  font-size: 30px;
+  font-weight: 800;
+  text-align: left;
+}
+.faqs .container .faq {
+  margin-bottom: 20px;
+}
+.faqs .container .faq:last-child {
+  margin-bottom: 0;
+}
+.faqs .container .faq h3 {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.faqs .container .faq p {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+  margin: 0;
+  text-align: justify;
+}
+.row-privacy-policy {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 40px;
+}
+.row-privacy-policy h2 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 800;
+  color: var(--primery);
+}
+.row-privacy-policy p,
+.row-privacy-policy li {
+  text-align: justify;
+}
+.column-privacy-ploicy {
+  text-align: left;
+}
+.column-privacy-ploicy ul,
+.column-privacy-ploicy li {
+  list-style: inherit;
+}
+.column-privacy-ploicy ul {
+  margin-left: 30px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.terms-and-conditions .column-privacy-ploicy ul li ul li {
+  position: relative;
+  padding-left: 4em;
+}
+.column-privacy-ploicy > ul > li {
+  position: relative;
+  padding-left: 3em;
+}
+.column-privacy-ploicy.two > ul > li {
+  position: relative;
+  padding-left: 2em;
+}
+
+.column-privacy-ploicy > ul > li strong {
+  position: absolute;
+  left: 0;
+}
+.column-privacy-ploicy ul li:not(:last-child) {
+  margin-bottom: 0.2rem;
+}
+.privacy-policy .row-privacy-policy .column-privacy-ploicy:nth-child(4) ul li,
+.privacy-policy .row-privacy-policy .column-privacy-ploicy:nth-child(3) ul li {
+  padding-left: 0 !important;
+}
+.column-privacy-ploicy a {
+  color: var(--primery);
+}
+.pl-zero {
+  list-style: disc !important;
+}
+.pl-zero li {
+  padding-left: 0 !important;
+}
