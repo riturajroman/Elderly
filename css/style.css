@@ -4170,3 +4170,8 @@ footer .logo a img {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.nav-link.active {
+  color: #2786a5;
+  font-weight: bold !important;
+}
