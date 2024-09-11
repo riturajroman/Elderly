@@ -275,3 +275,22 @@ function ActiveMenu() {
   });
 }
 ActiveMenu();
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the current page URL or a unique identifier for the page
+  let page = window.location.pathname; // This will be the unique identifier (you can also use a custom ID for each page)
+
+  // Get the views for this specific page from localStorage
+  let views = localStorage.getItem("pageViews_" + page)
+    ? parseInt(localStorage.getItem("pageViews_" + page))
+    : 750;
+
+  // Increment the view count for this page
+  views++;
+
+  // Store the updated view count in localStorage with the page-specific key
+  localStorage.setItem("pageViews_" + page, views);
+
+  // Update the DOM to display the updated view count for this page
+  document.getElementById("view-count").innerText = `${views} Views`;
+});

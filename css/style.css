@@ -4175,3 +4175,6 @@ footer .logo a img {
   color: #2786a5;
   font-weight: bold !important;
 }
+.owl-carousel .owl-stage {
+  width: 6500px !important;
+}
