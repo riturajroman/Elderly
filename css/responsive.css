@@ -644,6 +644,13 @@
 }
 
 @media screen and (max-width: 767px) {
+  #quick_links_side {
+    padding-top: 40px;
+  }
+  footer .design_by {
+    flex-direction: column;
+    row-gap: 12px;
+  }
   #navbarSupportedContent .navbar-nav li:last-child {
     display: none;
   }
@@ -696,10 +703,6 @@
   /* banner section */
   .banner_section {
     margin-top: 60px;
-  }
-
-  .banner_section .banner_text {
-    /*margin-top: -30px;*/
   }
 
   .banner_section .banner_text h1 {
@@ -1431,7 +1434,7 @@
 
   /* ============Contact Page Css Start============ */
   .contact_listing {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 

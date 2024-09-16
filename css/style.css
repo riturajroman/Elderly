@@ -654,7 +654,7 @@ header {
 
 /* hero slider heading h1 */
 .banner_section .banner_text h1 {
-  font-size: 70px;
+  font-size: 60px;
   color: var(--dark-black);
   letter-spacing: 1.5px;
   font-weight: 700;
@@ -1810,15 +1810,19 @@ iframe#youtubevideo {
   background-color: var(--text-white);
   padding: 40px 40px 0 40px;
   border-radius: 20px;
+  min-height: 575px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .feature_box h3 {
   color: var(--primery);
 }
 
-.feature_box .img {
+/* .feature_box .img {
   margin-top: 40px;
-}
+} */
 
 .key_innner .owl-nav button {
   position: absolute;
@@ -2101,13 +2105,13 @@ footer .social_media li a:hover {
 
 footer .download_side {
   text-align: right;
-  padding-top: 90px;
 }
 
 footer .download_side .app_btn {
-  display: flex;
-  align-items: center;
-  justify-content: end;
+  display: grid;
+  gap: 12px;
+  place-content: end;
+  place-items: end;
   margin-top: 40px;
 }
 
@@ -3612,10 +3616,10 @@ footer .download_side .app_btn li a img {
 }
 
 .contact_listing {
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   text-align: center;
 }
@@ -3634,12 +3638,14 @@ footer .download_side .app_btn li a img {
 .contact_listing li .lable {
   display: block;
   line-height: 1;
+  margin-bottom: 10px;
 }
 
 .contact_listing li a {
   font-weight: 700;
   font-size: 20px;
   transition: 0.4s all;
+  line-height: normal;
 }
 
 .contact_form {
@@ -4177,4 +4183,114 @@ footer .logo a img {
 }
 .owl-carousel .owl-stage {
   width: 6500px !important;
+}
+@media only screen and (min-width: 1024px) {
+  #elderly-wellness-banner p {
+    width: 75%;
+  }
+  .feature_box {
+    min-height: 575px !important;
+  }
+}
+#feature_slider .feature_box p {
+  line-height: 22px;
+}
+.hero_image img {
+  width: 100%;
+}
+#cancellation-refund-policy .column-privacy-ploicy > ul > li strong {
+  position: relative;
+}
+#cancellation-refund-policy .column-privacy-ploicy > ul > li {
+  padding-left: 0;
+}
+.our_value_section.home_feature {
+  max-width: 1370px;
+  margin: 0 auto;
+  background-color: var(--dark-black);
+  padding: 100px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.our_value_section::before,
+.our_value_section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100px;
+  background-image: url(../images/yellow_dotes_tr.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 410px;
+  background-position: center;
+  z-index: -1;
+}
+.our_value_section.home_feature .dotes_blue {
+  position: absolute;
+  top: -65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.our_value_section .value_slider .value_block p {
+  margin-bottom: 0;
+  color: var(--black);
+}
+#service-provider-section .banner_text {
+  text-align: center;
+  max-width: 800px;
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+.btn_bottom.black {
+  z-index: 1;
+  border: 1px solid var(--black);
+  border-radius: 100px;
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  right: -12px;
+  transform: translate(-0.52em, 0.52em);
+  width: 100%;
+  height: 100%;
+}
+.black_btn {
+  color: var(--text-white);
+  background-color: var(--black);
+  font-size: 16px;
+  padding: 9px 30px;
+  border-radius: 25px;
+  margin-left: 20px;
+  position: relative;
+  transform: translate3d(-3px, -4px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  transition: 0.4s all;
+  z-index: 2;
+}
+.black_btn:hover {
+  color: var(--text-white);
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+footer .design_by {
+  display: flex;
+  column-gap: 20px;
+}
+#quick_links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-top: 40px;
+}
+#quick_links li:after {
+  display: none;
+}
+#quick_links li a {
+  transition: all 0.3s ease;
+}
+#quick_links li a:hover {
+  letter-spacing: 0.5px;
 }
