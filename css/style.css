@@ -94,6 +94,7 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--black);
   background-color: var(--text-white);
+  overflow-x: hidden;
 }
 .text_list_section {
   background-color: #f5f5f5;
