@@ -656,7 +656,6 @@ header {
 .banner_section .banner_text h1 {
   font-size: 60px;
   color: var(--dark-black);
-  letter-spacing: 1.5px;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -4191,6 +4190,9 @@ footer .logo a img {
   .feature_box {
     min-height: 575px !important;
   }
+  .our_value_section .value_slider .value_block {
+    min-height: 384px !important;
+  }
 }
 #feature_slider .feature_box p {
   line-height: 22px;
@@ -4240,7 +4242,7 @@ footer .logo a img {
 }
 #service-provider-section .banner_text {
   text-align: center;
-  max-width: 800px;
+  max-width: 1100px;
   margin-top: 0;
   margin-bottom: 70px;
 }

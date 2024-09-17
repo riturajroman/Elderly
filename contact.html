@@ -23,7 +23,7 @@
       gtag("config", "G-5VZ8XCMKWN");
     </script>
     <!-- Google tag (gtag.js) -->
-    <title>Elderly</title>
+    <title>Contact</title>
 
     <!-- icofont-css-link -->
     <link rel="stylesheet" href="./css/icofont.min.css" />
@@ -77,8 +77,22 @@
               <li class="nav-item">
                 <a class="nav-link" href="./index.html">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about.html">About us</a>
+              <li class="nav-item has_dropdown">
+                <a class="nav-link" href="#">About</a>
+                <span class="drp_btn"
+                  ><i class="icofont-rounded-down"></i
+                ></span>
+                <div class="sub_menu">
+                  <ul>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li>
+                      <a href="./elderly-wellness.html">Elderly Wellness</a>
+                    </li>
+                    <li>
+                      <a href="./service-provider.html">Service Provider</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./board-of-advisors.html"
@@ -186,14 +200,42 @@
               <h2>Drop a message us</h2>
               <p>Fill up form below, our team will get back soon</p>
             </div>
-            <form data-aos="fade-up" data-aos-duration="1500">
+            <form
+              action="https://formspree.io/f/mvoeleov"
+              method="POST"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">
                     <input
                       type="text"
+                      name="full-name"
                       class="form-control"
-                      placeholder="Name *"
+                      placeholder="Full Name *"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      name="age"
+                      class="form-control"
+                      placeholder="Age *"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      name="phone"
+                      class="form-control"
+                      placeholder="Phone *"
                       required
                     />
                   </div>
@@ -202,6 +244,7 @@
                   <div class="form-group">
                     <input
                       type="email"
+                      name="email"
                       class="form-control"
                       placeholder="Email *"
                       required
@@ -211,27 +254,11 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Company Name"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <select class="form-control">
-                      <option value="">Country</option>
-                      <option value="">India</option>
-                      <option value="">USA</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <input
                       type="text"
+                      name="experience"
                       class="form-control"
-                      placeholder="Phone"
+                      placeholder="Experience (Years) *"
+                      required
                     />
                   </div>
                 </div>
@@ -239,23 +266,49 @@
                   <div class="form-group">
                     <input
                       type="text"
+                      name="education"
                       class="form-control"
-                      placeholder="Website"
+                      placeholder="Education *"
+                      required
                     />
                   </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-4">
                   <div class="form-group">
-                    <textarea
+                    <input
+                      type="text"
+                      name="additional-certification"
                       class="form-control"
-                      placeholder="Comments"
-                    ></textarea>
+                      placeholder="Additional Certification"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="area-of-expertise"
+                      class="form-control"
+                      placeholder="Area of Expertise *"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="physio-device"
+                      class="form-control"
+                      placeholder="Physio Device for Service *"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="col-md-8">
                   <div class="coustome_checkbox">
                     <label for="term_checkbox">
-                      <input type="checkbox" id="term_checkbox" />
+                      <input type="checkbox" id="term_checkbox" name="terms" />
                       <span class="checkmark"></span>
                       I agree to receive emails, newsletters and promotional
                       messages
@@ -264,7 +317,9 @@
                 </div>
                 <div class="col-md-4 text-right">
                   <div class="btn_block">
-                    <button class="btn puprple_btn ml-0">Submit</button>
+                    <button class="btn puprple_btn ml-0" type="submit">
+                      Submit
+                    </button>
                     <div class="btn_bottom"></div>
                   </div>
                 </div>

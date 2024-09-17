@@ -644,6 +644,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  #service-provider-section .banner_text p br {
+    display: none;
+  }
   #quick_links_side {
     padding-top: 40px;
   }
