@@ -2338,6 +2338,7 @@ footer .download_side .app_btn li a img {
   padding: 50px;
   border-radius: 20px;
   text-align: center;
+  min-height: 384px !important;
 }
 
 .our_value_section .value_slider .value_block .icon {
