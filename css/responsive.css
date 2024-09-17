@@ -654,9 +654,6 @@
     flex-direction: column;
     row-gap: 12px;
   }
-  #navbarSupportedContent .navbar-nav li:last-child {
-    display: none;
-  }
   #flex-bigScreen-blog #flex-bigScreen {
     display: flex;
     flex-direction: column;
