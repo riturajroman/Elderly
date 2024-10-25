@@ -3644,8 +3644,8 @@ footer .download_side .app_btn li a img {
 }
 
 .contact_listing li a {
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 18px;
   transition: 0.4s all;
   line-height: normal;
 }
