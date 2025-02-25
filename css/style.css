@@ -1942,6 +1942,7 @@ iframe#youtubevideo {
 .blog_section .blog_listing {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .blog_section .blog_listing .blog_post {
@@ -2002,6 +2003,14 @@ iframe#youtubevideo {
 
 .blog_section .blog_listing .blog_post .tag_more a:hover {
   color: var(--dark-black);
+}
+#blog-page-elderly .blog_post h3 a {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ------Footer-Css-Start-------------- */
@@ -3380,8 +3389,8 @@ footer .download_side .app_btn li a img {
 }
 
 .blog_head h1 {
-  font-size: 50px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 600;
   margin: 15px 0 30px 0;
 }
 
@@ -3489,6 +3498,20 @@ footer .download_side .app_btn li a img {
 .blog_body .social_media li a:hover {
   background-color: var(--bg-white);
   color: var(--dark-black);
+}
+.blog_body ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.blog_body li {
+  margin-bottom: 1rem;
+  list-style-type: square;
+}
+.social_media,
+.social_media li {
+  list-style: none;
+  padding: 0 !important;
 }
 
 /* comment section Css Start */
