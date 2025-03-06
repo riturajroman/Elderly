@@ -3513,6 +3513,15 @@ footer .download_side .app_btn li a img {
   list-style: none;
   padding: 0 !important;
 }
+.blog_body ol li {
+  list-style-type: decimal;
+}
+.blog_body li a,
+.blog_body p a {
+  color: var(--primery);
+  font-weight: bold;
+  transition: 0.4s all;
+}
 
 /* comment section Css Start */
 .comment_section .section_title h2 {
