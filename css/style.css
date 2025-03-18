@@ -134,6 +134,11 @@ h3 {
   color: var(--black);
   font-weight: 700;
 }
+h4 {
+  font-size: 18px;
+  color: var(--black);
+  font-weight: 600;
+}
 
 .white_text p,
 .white_text .section_title h2,
