@@ -81,22 +81,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="./index.html">Home</a>
               </li>
-              <li class="nav-item has_dropdown">
-                <a class="nav-link" href="#">About</a>
-                <span class="drp_btn"
-                  ><i class="icofont-rounded-down"></i
-                ></span>
-                <div class="sub_menu">
-                  <ul>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li>
-                      <a href="./elderly-wellness.html">Elderly Wellness</a>
-                    </li>
-                    <li>
-                      <a href="./service-provider.html">Service Provider</a>
-                    </li>
-                  </ul>
-                </div>
+              <li class="nav-item">
+                <a href="./about.html" class="nav-link">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./board-of-advisors.html"
@@ -143,8 +129,10 @@
               <img src="./images/hero-text.svg" alt="image" />
               <!-- p -->
               <p>
-                At Elderly, we bridge the gap between physiotherapists, nursing
-                assistants, caregivers, and the elderly.
+                Elderly Wellness connects families with trained professionals
+                providing nursing care, physiotherapy, and assisted living
+                support, ensuring peace of mind and improved quality of life for
+                seniors.
               </p>
             </div>
 
@@ -294,7 +282,7 @@
                 data-aos-delay="100"
               >
                 <span class="icon">
-                  <img src="./images/feature-icon2.svg" alt="image" />
+                  <img src="./images/feature-icon3.svg" alt="image" />
                 </span>
                 <!-- h2 -->
                 <h2>Affordable, Transparent Care</h2>
@@ -337,7 +325,7 @@
                 data-aos-delay="100"
               >
                 <span class="icon">
-                  <img src="./images/feature-icon3.svg" alt="image" />
+                  <img src="./images/feature-icon2.svg" alt="image" />
                 </span>
                 <!-- h2 -->
                 <h2>Reliable, Long-term Support</h2>
@@ -536,152 +524,127 @@
       <!-- Text List flow Section End -->
 
       <!-- Service Section Start -->
-      <section class="row_am service_section">
-        <div class="container">
-          <div
-            class="section_title"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-          >
-            <span class="title_badge mb-1">Services</span>
-            <h2>
-              Premium <span>services</span> of <br />
-              Elderly
-            </h2>
-          </div>
-          <div class="row service_blocks">
-            <div class="col-md-6">
+
+      <div class="page_wrapper">
+        <!-- Key Feature Section Start -->
+        <section class="key_feature_section row_am">
+          <div class="key_innner">
+            <div class="container">
+              <div class="section_title">
+                <h2>Elderly <span>Services</span></h2>
+              </div>
               <div
-                class="service_text"
+                id="feature_slider"
+                class="owl-carousel owl-theme"
                 data-aos="fade-up"
                 data-aos-duration="1500"
               >
-                <div class="service_badge">
-                  <i class="icofont-tasks-alt"></i>
-                  <span>ELDERLY FOR PATIENTS</span>
+                <div class="item">
+                  <div class="feature_box">
+                    <div class="feature-box-content">
+                      <h3>Find Experienced Health and Home Care Experts</h3>
+                      <p>
+                        Easily connect with certified physiotherapists, nursing
+                        assistants, caregivers, and other specialists near you,
+                        ensuring quality care for the elderly.
+                      </p>
+                    </div>
+                    <div class="img">
+                      <img src="images/app-feature1.png" alt="image" />
+                    </div>
+                  </div>
                 </div>
-                <h2>
-                  <span>Personalized Booking,</span> Tailored Sorting, and
-                  Seamless Engagement
-                </h2>
-                <ul class="listing_block">
-                  <li>
-                    <div class="icon">
-                      <span><i class="icofont-ui-check"></i></span>
-                    </div>
-                    <div class="text">
+                <div class="item">
+                  <div class="feature_box">
+                    <div class="feature-box-content">
+                      <h3>Simple and Convenient Bookings</h3>
                       <p>
-                        Comprehensive Service Booking: Easily access detailed
-                        profiles of service providers, including their name,
-                        age, experience, and service locations, along with
-                        testimonials for added assurance.
+                        Effortlessly book health and home care services through
+                        a user-friendly interface. Choose from various time
+                        slots and get assistance at your preferred schedule.
                       </p>
                     </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <span><i class="icofont-ui-check"></i></span>
+                    <div class="img">
+                      <img src="images/app-feature2.png" alt="image" />
                     </div>
-                    <div class="text">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="feature_box">
+                    <div class="feature-box-content">
+                      <h3>Personalized Care at Your Doorstep</h3>
                       <p>
-                        Flexible Listing Sorting: Customize your search by
-                        sorting listings based on location, services offered,
-                        price, and specialties. Refine options further by
-                        experience level and customer ratings for personalized
-                        care.
+                        Get tailored services like physiotherapy, nursing care,
+                        or companionship delivered right to your home.
                       </p>
                     </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <span><i class="icofont-ui-check"></i></span>
+                    <div class="img">
+                      <img src="images/app-feature3.png" alt="image" />
                     </div>
-                    <div class="text">
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="feature_box">
+                    <div class="feature-box-content">
+                      <h3>Manage Multiple Services in One Place</h3>
                       <p>
-                        Convenient In-App Transactions and Feedback: Seamlessly
-                        pay for services within the app using online payment
-                        options. After completion, rate your service provider
-                        and share your patient story to contribute to the
-                        community's collective experience and improvement.
+                        Access a range of wellness services and manage them
+                        within a single app for seamless coordination.
                       </p>
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="img" data-aos="fade-up" data-aos-duration="1500">
-                <img src="./images/service1.png" alt="image" />
+                    <div class="img">
+                      <img src="images/app-feature4.png" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="feature_box">
+                    <div class="feature-box-content">
+                      <h3>Monitor Health and Care Plans</h3>
+                      <p>
+                        Keep track of care schedules, medical appointments, and
+                        health updates for continuous and consistent care.
+                      </p>
+                    </div>
+                    <div class="img">
+                      <img src="images/app-feature5.png" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="feature_box">
+                    <div class="feature-box-content">
+                      <h3>Secure Payment Gateway</h3>
+                      <p>
+                        Enjoy effortless and secure payments with multiple
+                        options and transparent billing.
+                      </p>
+                    </div>
+                    <div class="img">
+                      <img src="images/app-feature6.png" alt="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="feature_box">
+                    <div class="feature-box-content">
+                      <h3>24/7 Customer Support</h3>
+                      <p>
+                        A dedicated support team to assist you anytime, ensuring
+                        a smooth experience.
+                      </p>
+                    </div>
+                    <div class="img">
+                      <img src="images/app-feature1.png" alt="image" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="row service_blocks flex-row-reverse">
-            <div class="col-md-6">
-              <div
-                class="service_text right_side"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <div class="service_badge">
-                  <i class="icofont-ui-clock"></i>
-                  <span>ELDERLY FOR SERVICE PROVIDERS</span>
-                </div>
-                <h2>
-                  <span>Streamlined Booking Management,</span> Transparent
-                  Earnings, and Customized Service Provision
-                </h2>
-                <ul class="feature_list">
-                  <li>
-                    <div class="icon">
-                      <span><i class="icofont-check-circled"></i></span>
-                    </div>
-                    <div class="text">
-                      <p>
-                        Effortless Booking Management: Stay organized with easy
-                        access to booking requests and appointment schedules.
-                        Track patient updates and manage your schedule
-                        seamlessly with the in-built calendar feature.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <span><i class="icofont-check-circled"></i></span>
-                    </div>
-                    <div class="text">
-                      <p>
-                        Transparent Earnings Overview: Keep track of your
-                        earnings, ratings, and reviews through an intuitive
-                        dashboard. Gain insights into your performance and
-                        patient feedback to continually enhance your services.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="icon">
-                      <span><i class="icofont-check-circled"></i></span>
-                    </div>
-                    <div class="text">
-                      <p>
-                        Customized Service Provision: Tailor your services by
-                        updating your profile with additional certifications and
-                        specifying available time slots. Provide flexibility to
-                        patients by mentioning unbooked/free slots, enabling
-                        them to schedule appointments conveniently.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="img" data-aos="fade-up" data-aos-duration="1500">
-                <img src="./images/service2.png" alt="image" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+        <!-- Key Feature Section End -->
+      </div>
       <!-- Service Section End -->
 
       <!-- How It Work Section Start -->
