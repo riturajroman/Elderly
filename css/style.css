@@ -1814,12 +1814,19 @@ iframe#youtubevideo {
 .feature_box {
   text-align: center;
   background-color: var(--text-white);
-  padding: 40px 40px 0 40px;
   border-radius: 20px;
   min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.feature-box-content {
+  padding: 40px 40px 0 40px;
+}
+.feature_box .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature_box h3 {
@@ -4337,4 +4344,13 @@ footer .design_by {
   width: 100%;
   height: auto;
   object-fit: cover; /* Ensures the video fills the space without distortion */
+}
+#home-services-section .key_innner {
+  background-color: var(--primery);
+}
+#home-blog-section .blog_listing {
+  flex-wrap: nowrap;
+}
+#home-blog-section .blog_listing .blog_post h3 {
+  font-size: 20px;
 }

@@ -1554,6 +1554,9 @@
   .column-privacy-ploicy.two > ul > li {
     padding-left: 0;
   }
+  .remove-br br {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
