@@ -1557,6 +1557,9 @@
   .remove-br br {
     display: none;
   }
+  #home-services-section {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (max-width: 576px) {
