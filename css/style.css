@@ -1816,7 +1816,7 @@ iframe#youtubevideo {
   background-color: var(--text-white);
   padding: 40px 40px 0 40px;
   border-radius: 20px;
-  min-height: 575px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -4227,9 +4227,6 @@ footer .logo a img {
   #elderly-wellness-banner p {
     width: 75%;
   }
-  .feature_box {
-    min-height: 575px !important;
-  }
   .our_value_section .value_slider .value_block {
     min-height: 384px !important;
   }
@@ -4335,4 +4332,9 @@ footer .design_by {
 }
 #quick_links li a:hover {
   letter-spacing: 0.5px;
+}
+.slider_media video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the video fills the space without distortion */
 }
