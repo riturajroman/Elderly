@@ -1615,3 +1615,9 @@
     padding: 30px;
   }
 }
+
+@media only screen and (min-width: 2100px) {
+  .downaload_section .center_screen .img img {
+    width: 50% !important;
+  }
+}
