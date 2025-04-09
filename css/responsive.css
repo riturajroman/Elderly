@@ -1560,6 +1560,9 @@
   #home-services-section {
     margin-top: 40px;
   }
+  .br-none br {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
