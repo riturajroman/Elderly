@@ -1,0 +1,13 @@
+# BEGIN Custom Redirects
+
+<IfModule mod_alias.c>
+Redirect 301 /comprehensive-guide-to-caregivers.html https://blogs.theelderlywellness.com/what-is-caregivers/
+Redirect 301 /how-to-increase-sodium-levels-in-elderly-at-home.html https://blogs.theelderlywellness.com/how-to-increase-sodium-levels-in-elderly-at-home/
+Redirect 301 /how-elderly-wellness-works.html https://blogs.theelderlywellness.com/how-elderly-wellness-works/
+Redirect 301 /the-inspiring-journey-of-eldery.html https://blogs.theelderlywellness.com/journey-of-eldery/
+Redirect 301 /what-is-elderly.html https://blogs.theelderlywellness.com/what-is-elderly/
+Redirect 301 /activities-of-daily-living-adls-for-parents.html https://blogs.theelderlywellness.com/activities-of-daily-living-adls-for-parents/
+Redirect 301 /essential-grooming-hygiene-tips-elderly.html https://blogs.theelderlywellness.com/essential-grooming-hygiene-tips-elderly/
+Redirect 301 /blogs.html https://blogs.theelderlywellness.com/
+</IfModule>
+# END Custom Redirects
