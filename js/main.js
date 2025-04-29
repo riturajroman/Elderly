@@ -294,3 +294,98 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update the DOM to display the updated view count for this page
   document.getElementById("view-count").innerText = `${views} Views`;
 });
+// Create a function to add floating buttons
+function addFloatingButtons() {
+  // WhatsApp Button (left side)
+  const whatsappButton = document.createElement("a");
+  whatsappButton.href = "https://wa.me/919944890577"; // Your WhatsApp number
+  whatsappButton.target = "_blank";
+  whatsappButton.rel = "noopener noreferrer";
+  whatsappButton.title = "Chat with us on WhatsApp";
+
+  // WhatsApp Button Styles
+  whatsappButton.style.position = "fixed";
+  whatsappButton.style.left = "20px";
+  whatsappButton.style.bottom = "20px";
+  whatsappButton.style.backgroundColor = "#25D366";
+  whatsappButton.style.color = "white";
+  whatsappButton.style.width = "50px";
+  whatsappButton.style.height = "50px";
+  whatsappButton.style.borderRadius = "50%";
+  whatsappButton.style.display = "flex";
+  whatsappButton.style.alignItems = "center";
+  whatsappButton.style.justifyContent = "center";
+  whatsappButton.style.fontSize = "24px";
+  whatsappButton.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.2)";
+  whatsappButton.style.zIndex = "9999";
+  whatsappButton.style.transition = "all 0.3s ease";
+
+  // Call Button (right side)
+  const callButton = document.createElement("a");
+  callButton.href = "tel:+919944890577"; // Your phone number with country code
+  callButton.title = "Call Us";
+
+  // Call Button Styles
+  callButton.style.position = "fixed";
+  callButton.style.right = "20px";
+  callButton.style.bottom = "20px";
+  callButton.style.backgroundColor = "#4285F4"; // Blue color
+  callButton.style.color = "white";
+  callButton.style.width = "50px";
+  callButton.style.height = "50px";
+  callButton.style.borderRadius = "50%";
+  callButton.style.display = "flex";
+  callButton.style.alignItems = "center";
+  callButton.style.justifyContent = "center";
+  callButton.style.fontSize = "24px";
+  callButton.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.2)";
+  callButton.style.zIndex = "9999";
+  callButton.style.transition = "all 0.3s ease";
+
+  // Add hover effects to both buttons
+  function addHoverEffect(button) {
+    button.addEventListener("mouseover", function () {
+      this.style.transform = "scale(1.1)";
+      this.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.3)";
+    });
+
+    button.addEventListener("mouseout", function () {
+      this.style.transform = "scale(1)";
+      this.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.2)";
+    });
+  }
+
+  addHoverEffect(whatsappButton);
+  addHoverEffect(callButton);
+
+  // Create icons
+  const whatsappIcon = document.createElement("i");
+  whatsappIcon.className = "fab fa-whatsapp";
+
+  const phoneIcon = document.createElement("i");
+  phoneIcon.className = "fas fa-phone-alt";
+
+  // Add icons to buttons
+  whatsappButton.appendChild(whatsappIcon);
+  callButton.appendChild(phoneIcon);
+
+  // Add buttons to the body
+  document.body.appendChild(whatsappButton);
+  document.body.appendChild(callButton);
+
+  // Load Font Awesome if not already loaded
+  if (!document.querySelector('link[href*="font-awesome"]')) {
+    const fontAwesome = document.createElement("link");
+    fontAwesome.rel = "stylesheet";
+    fontAwesome.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css";
+    document.head.appendChild(fontAwesome);
+  }
+}
+
+// Call the function when the DOM is fully loaded
+if (document.readyState === "complete") {
+  addFloatingButtons();
+} else {
+  document.addEventListener("DOMContentLoaded", addFloatingButtons);
+}

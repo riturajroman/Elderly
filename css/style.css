@@ -2204,7 +2204,7 @@ footer .download_side .app_btn li a img {
 /* footer go top button */
 .go_top {
   position: fixed;
-  right: 30px;
+  right: 18px;
   bottom: 110px;
   cursor: pointer;
   transition: 0.4s all;

@@ -104,11 +104,11 @@
   }
 
   .go_top {
-    bottom: 30px;
+    bottom: 80px;
   }
 
   .go_top:hover {
-    bottom: 40px;
+    bottom: 90px;
   }
 
   .task_app_section .task_block {
@@ -759,7 +759,7 @@
 
   /* go top button section */
   .go_top {
-    bottom: 30px;
+    bottom: 80px;
     z-index: 999;
   }
 
