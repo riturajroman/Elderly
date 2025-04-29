@@ -63,6 +63,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Sloop Script";
+  src: url("../fonts/sloop-script-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* -----------Css-variable------ */
 
@@ -655,16 +662,24 @@ header {
 
 /* hero slider text */
 .banner_section .banner_text {
-  margin-top: -50px;
+  margin-top: -80px;
 }
 
 /* hero slider heading h1 */
 .banner_section .banner_text h1 {
-  font-size: 60px;
+  font-size: 50px;
   color: var(--dark-black);
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 20px;
   letter-spacing: -2px;
+}
+#banner-font2 {
+  font-size: 60px;
+  color: var(--dark-black);
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+  line-height: 0.7;
 }
 .banner_text img {
   margin-bottom: 20px;
@@ -4405,4 +4420,10 @@ footer .design_by {
   font-size: 0.85rem;
   color: #777;
   margin-bottom: 8px;
+}
+.heading-font {
+  font-family: "Cormorant Garamond", serif;
+}
+#banner-font2 span {
+  font-family: Sloop Script;
 }
