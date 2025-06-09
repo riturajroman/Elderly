@@ -1563,6 +1563,13 @@
   .br-none br {
     display: none;
   }
+  .inner-services-page #services-inner-icon-section .how_it_inner .row {
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  #how-to-arrangr-section-inner-services .section_title h2 {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 576px) {
