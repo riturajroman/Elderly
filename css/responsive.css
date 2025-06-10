@@ -1567,8 +1567,22 @@
     gap: 25px;
     flex-wrap: wrap;
   }
-  #how-to-arrangr-section-inner-services .section_title h2 {
-    font-size: 30px;
+  #how-to-arrangr-section-inner-services .section_title h2,
+  #services-inner-page-banner-section.banner_section .banner_text h1 {
+    font-size: 28px;
+  }
+  #services-inner-page-banner-section.banner_section .banner_text {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  #services-inner-page-banner-section {
+    padding-bottom: 60px;
+  }
+  .inner-services-page .service_section .service_text h2 {
+    font-size: 28px;
+  }
+  .inner-services-page .section_title {
+    text-align: left;
   }
 }
 
