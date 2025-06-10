@@ -4587,3 +4587,7 @@ footer .design_by {
   font-weight: 600;
   font-size: 38px;
 }
+.inner-services-page .service_section .service_text h2,
+.inner-services-page .section_title h2 {
+  font-weight: 600;
+}
