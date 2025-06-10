@@ -4591,3 +4591,9 @@ footer .design_by {
 .inner-services-page .section_title h2 {
   font-weight: 600;
 }
+.btn-main-row-service-inner-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
