@@ -1215,7 +1215,7 @@ iframe#youtubevideo {
 }
 
 .service_section .service_text h2 {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
   color: var(--black);
   margin: 25px 0;
@@ -2043,7 +2043,7 @@ iframe#youtubevideo {
 /* ------Footer-Css-Start-------------- */
 footer {
   background-color: var(--dark-black);
-  padding: 100px 0;
+  padding: 60px 0;
   padding-left: 15px !important;
   padding-right: 15px !important;
   margin-top: 50px;
@@ -2850,7 +2850,6 @@ footer .download_side .app_btn li a img {
 .faq_section .card {
   border: none;
   background-color: #fff;
-  margin-bottom: 20px;
   border-radius: 10px;
 }
 
@@ -4596,4 +4595,10 @@ footer .design_by {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+#assisted-living-support-inner-banner h1 {
+  font-size: 36px !important;
+}
+#faq-section-inner-services {
+  padding-bottom: 60px;
 }
