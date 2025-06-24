@@ -1576,13 +1576,22 @@
     padding-top: 20px;
   }
   #services-inner-page-banner-section {
-    padding-bottom: 60px;
+    padding-top: 40px;
+  }
+  #assisted-living-support-inner-banner h1 {
+    font-size: 32px !important;
+  }
+  #services-inner-page-banner-section h2 {
+    font-size: 28px;
   }
   .inner-services-page .service_section .service_text h2 {
     font-size: 28px;
   }
   .inner-services-page .section_title {
     text-align: left;
+  }
+  .inner-services-page #services-inner-page-banner-section .row {
+    flex-direction: column-reverse;
   }
 }
 
