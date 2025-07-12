@@ -4699,7 +4699,7 @@ footer .design_by {
   background-color: #fafafa;
 }
 #services-inner-page-banner-section {
-  background-image: url("../images/services/sectionbanner_section-bg.webp");
+  background: linear-gradient(180deg, #dbf4fb 0%, #86d9f0 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
