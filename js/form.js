@@ -40,8 +40,7 @@ nextBtns.forEach((btn, index) => {
 });
 
 const submitBtn = document.querySelector(".submit-btn");
-submitBtn.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent default form submission
+submitBtn.addEventListener("click", () => {
   const input = slides[currentSlide].querySelector("input, textarea, select");
   if (input && !input.value) {
     showToast("Please fill in all fields.");
@@ -50,139 +49,9 @@ submitBtn.addEventListener("click", (e) => {
   } else if (input && input.id === "mobile" && !isValidMobile(input.value)) {
     showToast("Please enter a valid mobile number.");
   } else {
-    submitForm();
+    document.getElementById("myForm").submit();
   }
 });
-
-function submitForm() {
-  const form = document.getElementById("myForm");
-  const formData = new FormData(form);
-
-  // Show loading state
-  const submitButton = document.querySelector(".submit-btn");
-  const originalText = submitButton.textContent;
-  submitButton.textContent = "Submitting...";
-  submitButton.disabled = true;
-
-  // Check if we're in development mode (localhost or file://)
-  const isDevelopment =
-    window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1" ||
-    window.location.protocol === "file:";
-
-  fetch("debug-form.php", {
-    method: "POST",
-    body: formData,
-  })
-    .then((response) => {
-      // Check if response is ok
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      // Get the response text first
-      return response.text();
-    })
-    .then((responseText) => {
-      // Try to parse JSON, with better error handling
-      let data;
-      try {
-        data = JSON.parse(responseText);
-      } catch (parseError) {
-        console.error("JSON Parse Error:", parseError);
-        console.error("Response text:", responseText);
-        console.error("Response length:", responseText.length);
-
-        // Check if this looks like HTML (common when PHP isn't working)
-        if (
-          responseText.trim().startsWith("<!DOCTYPE") ||
-          responseText.trim().startsWith("<html")
-        ) {
-          throw new Error(
-            "Received HTML instead of JSON - PHP may not be working"
-          );
-        }
-
-        // Show the actual response for debugging
-        if (
-          isDevelopment ||
-          window.location.hostname === "theelderlywellness.com"
-        ) {
-          throw new Error("Server response: " + responseText.substring(0, 200));
-        }
-
-        throw new Error("Invalid response from server");
-      }
-
-      if (data.success) {
-        // Show success message
-        Toastify({
-          text: data.message,
-          duration: 3000,
-          gravity: "top",
-          position: "center",
-          style: {
-            background: "#4CAF50",
-          },
-          stopOnFocus: true,
-        }).showToast();
-
-        // Redirect to thank you page after a short delay
-        setTimeout(() => {
-          window.location.href = "thank-you.html";
-        }, 1500);
-      } else {
-        // Show error message
-        Toastify({
-          text: data.message,
-          duration: 4000,
-          gravity: "top",
-          position: "center",
-          style: {
-            background: "#ff6347",
-          },
-          stopOnFocus: true,
-        }).showToast();
-
-        // Reset button
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-
-      let errorMessage = "An error occurred. Please try again later.";
-
-      // Provide more helpful error messages in development
-      if (isDevelopment) {
-        if (error.message.includes("PHP may not be working")) {
-          errorMessage =
-            "PHP is not running! Please use a local server like XAMPP or run 'php -S localhost:8000' in your project directory.";
-        } else if (error.message.includes("Failed to fetch")) {
-          errorMessage =
-            "Cannot connect to server. Make sure you're running a local PHP server.";
-        } else if (error.message.includes("HTTP error")) {
-          errorMessage = `Server error: ${error.message}. Check your PHP configuration.`;
-        }
-      }
-
-      Toastify({
-        text: errorMessage,
-        duration: 6000, // Longer duration for development messages
-        gravity: "top",
-        position: "center",
-        style: {
-          background: "#ff6347",
-        },
-        stopOnFocus: true,
-      }).showToast();
-
-      // Reset button
-      submitButton.textContent = originalText;
-      submitButton.disabled = false;
-    });
-}
 
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
