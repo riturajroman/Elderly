@@ -70,7 +70,7 @@ function submitForm() {
     window.location.hostname === "127.0.0.1" ||
     window.location.protocol === "file:";
 
-  fetch("process-form.php", {
+  fetch("debug-form.php", {
     method: "POST",
     body: formData,
   })
@@ -91,6 +91,7 @@ function submitForm() {
       } catch (parseError) {
         console.error("JSON Parse Error:", parseError);
         console.error("Response text:", responseText);
+        console.error("Response length:", responseText.length);
 
         // Check if this looks like HTML (common when PHP isn't working)
         if (
@@ -100,6 +101,14 @@ function submitForm() {
           throw new Error(
             "Received HTML instead of JSON - PHP may not be working"
           );
+        }
+
+        // Show the actual response for debugging
+        if (
+          isDevelopment ||
+          window.location.hostname === "theelderlywellness.com"
+        ) {
+          throw new Error("Server response: " + responseText.substring(0, 200));
         }
 
         throw new Error("Invalid response from server");
