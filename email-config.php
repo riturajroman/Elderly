@@ -5,8 +5,6 @@
 return [
     // SMTP Settings
     'smtp_host' => 'smtp.gmail.com', // Change to your SMTP server
-    'smtp_port' => 587,
-    'smtp_encryption' => 'tls', // or 'ssl'
 
     // Email Credentials
     'smtp_username' => 'noreplyelderly@gmail.com', // Your email address
