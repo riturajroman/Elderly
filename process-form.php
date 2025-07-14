@@ -1,7 +1,16 @@
 <?php
+// Handle preflight OPTIONS request for CORS
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: POST, OPTIONS');
+    header('Access-Control-Allow-Headers: Content-Type');
+    http_response_code(200);
+    exit();
+}
+
 // Enable error reporting for debugging (remove in production)
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set('display_errors', 0); // Changed to 0 for production
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -17,7 +26,7 @@ $config = require 'email-config.php';
 // Set content type to JSON for AJAX responses
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // Check if form is submitted
@@ -153,5 +162,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(['success' => false, 'message' => 'Message could not be sent. Please try again later.', 'error' => $e->getMessage()]);
     }
 } else {
-    echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
+    // Provide detailed error information for debugging
+    $method = $_SERVER['REQUEST_METHOD'] ?? 'UNKNOWN';
+    $contentType = $_SERVER['CONTENT_TYPE'] ?? 'UNKNOWN';
+    $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? 'UNKNOWN';
+
+    echo json_encode([
+        'success' => false,
+        'message' => 'Invalid request method. Expected POST, received: ' . $method,
+        'debug' => [
+            'method' => $method,
+            'content_type' => $contentType,
+            'user_agent' => substr($userAgent, 0, 100),
+            'server_software' => $_SERVER['SERVER_SOFTWARE'] ?? 'UNKNOWN'
+        ]
+    ]);
 }
